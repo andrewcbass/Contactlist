@@ -45,7 +45,7 @@ angular.module('myApp', [])
     $scope.editContact = function () {
       $http({
         method: 'PUT',
-        url: `http://localhost:12345/${indexEdit}`,
+        url: `http://localhost:12345/contacts/${indexEdit}`,
         data: $scope.edit
       })
       .then(function(res) {

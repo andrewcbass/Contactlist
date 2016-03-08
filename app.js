@@ -49,14 +49,27 @@ app.post('/contacts', function(req, res) {
 });
 
 //edit contact, runs after saving from modal
+app.put('/contacts/:index', function(req, res) {
+  fs.readFile('./contacts.json', function(err, data) {
+    var contacts = JSON.parse(data);
+    //cut out index (old) and replace with new
+    contacts.splice(req.params.index, 1, req.body);
+    console.log('REQ.BODY', req.body);
+    console.log('REQ.PARAMS.INDEX', req.params.index);
 
+    fs.writeFile('./contacts.json', JSON.stringify(contacts), function(err) {
+      console.log('contact edited successfuly');
+
+      res.send();
+    });
+  });
+});
 
 //delete contact from JSON file
 app.delete('/contacts/:index', function(req, res) {
 
   fs.readFile('./contacts.json', function(err, data) {
     var contacts = JSON.parse(data);
-    console.log('REQ.parmsr', req.params);
     contacts.splice(req.params.index, 1);
 
     fs.writeFile('./contacts.json', JSON.stringify(contacts), function(err) {
