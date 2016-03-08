@@ -1,17 +1,1 @@
-[{
-  "name": "cody",
-  "phone": "555-5555",
-  "email": "andy@gmail.com"
-}, {
-  "name": "Andy",
-  "phone": "555-5555",
-  "email": "andy@gmail.com"
-}, {
-  "name": "steve",
-  "phone": "(*&*(&@#$",
-  "email": "harvyu"
-}, {
-  "name": "me",
-  "phone": "123345",
-  "email": "cody@dmiauy.com"
-}]
+[{"name":"cody","phone":"555-5555","email":"andy@gmail.com"},{"name":"Andy","phone":"555-5555","email":"andy@gmail.com"},{"name":"oiansatien","phone":"a@#@#$","email":"arstst"}]

@@ -3,9 +3,24 @@ body {
 }
 
 .contactinputs {
-  margin: 10px;
+  font-size: 1.4em;
 }
 
 table {
   text-align: left;
+}
+
+input {
+  margin: 10px;
+}
+
+.jumbotron {
+  background-color: #75D71D;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+}
+
+table {
+  margin-top: 300px;
 }

@@ -13,17 +13,20 @@
 </head>
 
 <body ng-app='myApp' ng-controller='mainCtrl'>
-  <h1>All the people you know!!</h1>
-  <div class="contactinputs">
-    <label for="">New Contact: </label>
-    <input ng-model='newCon.name' type="text" placeholder='Last, First'>
-    <input ng-model='newCon.phone' type="text" placeholder='(555)555-1234'>
-    <input ng-model='newCon.email' type="text" placeholder='name@email.com'>
-    <button ng-click='addContact()' class='btn btn-info'>Add to Contacts</button>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <h1>All the people you know!!</h1>
+      <div class="contactinputs">
+        <label for="">New Contact: </label>
+        <input ng-model='newCon.name' type="text" placeholder='Last, First'>
+        <input ng-model='newCon.phone' type="text" placeholder='(555)555-1234'>
+        <input ng-model='newCon.email' type="text" placeholder='name@email.com'>
+        <button ng-click='addContact()' class='btn btn-info'>Add to Contacts</button>
+      </div>
+    </div>
   </div>
-
   <div class="container">
-    <table class='table table-hover'>
+    <table class='table table-striped'>
       <thead>
         <tr>
           <th>Name</th>
@@ -32,23 +35,24 @@
           <th>Edit</th>
           <th>Delete</th>
         </tr>
-        <tr ng-repeat='contact in conList track by $index'>
-          <td>{{contact.name}}</td>
-          <td>{{contact.phone}}</td>
-          <td>{{contact.email}}</td>
-          <td>
-            <button ng-click='editContactIndex(contact)' type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
-              <span class="glyphicon glyphicon-pencil"></span>
-            </button>
-          </td>
-          <td>
-            <button ng-click='deleteCon(contact)' type="button" class='btn btn-danger btn-sm'>
-              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-            </button>
-          </td>
-
-        </tr>
       </thead>
+        <tbody>
+          <tr ng-repeat='contact in conList track by $index'>
+            <td>{{contact.name}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.email}}</td>
+            <td>
+              <button ng-click='editContactIndex(contact)' type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </button>
+            </td>
+            <td>
+              <button ng-click='deleteCon(contact)' type="button" class='btn btn-danger btn-sm'>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
     </table>
   </div>
 
