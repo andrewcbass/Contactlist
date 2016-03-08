@@ -6,6 +6,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
   <title>Contacts</title>
 </head>
@@ -34,9 +36,13 @@
           <td>{{contact.name}}</td>
           <td>{{contact.phone}}</td>
           <td>{{contact.email}}</td>
-          <td>edit.. you wish!</td>
           <td>
-            <button ng-click='deleteCon(contact)' type="button" class='btn btn-danger btn-xs'>
+            <button ng-click='editContactIndex(contact)' type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+          </td>
+          <td>
+            <button ng-click='deleteCon(contact)' type="button" class='btn btn-danger btn-sm'>
               <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </button>
           </td>
@@ -45,6 +51,31 @@
       </thead>
     </table>
   </div>
+
+  <!-- Modal code here -->
+  <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Edit Contact</h4>
+          </div>
+          <div class="modal-body">
+            <label for="">Edit Contact: </label>
+            <input ng-model='edit.name' type="text" placeholder='Last, First'>
+            <input ng-model='edit.phone' type="text" placeholder='(555)555-1234'>
+            <input ng-model='edit.email' type="text" placeholder='name@email.com'>
+          </div>
+          <div class="modal-footer">
+            <button ng-click="editContact()" type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
 </body>
 </html>
