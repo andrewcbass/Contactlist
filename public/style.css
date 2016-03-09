@@ -19,3 +19,7 @@ input {
 table {
   margin-top: 300px;
 }
+
+.deletcol, .editcol {
+  width: 60px;
+}

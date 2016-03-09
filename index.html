@@ -47,12 +47,12 @@
             <td>{{contact.name}}</td>
             <td>{{contact.phone}}</td>
             <td>{{contact.email}}</td>
-            <td>
+            <td class='editcol'>
               <button ng-click='editContactIndex(contact)' type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
                 <span class="glyphicon glyphicon-edit"></span>
               </button>
             </td>
-            <td>
+            <td class='deletecol'>
               <button ng-click='deleteCon(contact)' type="button" class='btn btn-danger btn-sm'>
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
               </button>
