@@ -80,7 +80,6 @@ app.delete('/contacts/:index', function(req, res) {
   });
 });
 
-
 var server = http.createServer(app);
 
 server.listen(PORT, function() {

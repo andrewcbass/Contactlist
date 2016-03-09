@@ -11,8 +11,7 @@ angular.module('myApp', [])
       $scope.conList = res.data;
     }, function(err) {
       console.log('ERR', err);
-    });
-
+    })
 
     //add new contacts
     $scope.addContact = function () {
@@ -26,7 +25,7 @@ angular.module('myApp', [])
       function(err){
         console.log('ERR', err);
       })
-    };
+    }
 
     //grab contact idex on click of edit button
     $scope.editContactIndex = function (contact) {
@@ -59,4 +58,4 @@ angular.module('myApp', [])
       })
     }
 
-  });
+  })

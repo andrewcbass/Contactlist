@@ -1,26 +1,21 @@
 body {
   text-align: center;
 }
-
 .contactinputs {
   font-size: 1.2em;
 }
-
 table {
   text-align: left;
 }
-
 input {
   margin: 10px;
 }
-
 .jumbotron {
   background-color: lightgrey;
   position: fixed;
   width: 100%;
   z-index: 200;
 }
-
 table {
   margin-top: 300px;
 }
